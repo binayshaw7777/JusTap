@@ -67,26 +67,27 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-
-        val navController: NavController = findNavController(R.id.fragmentContainerView)
-        val count = navController.backQueue.size
-
-        if (count <= 2) {
-            if (timer + 2000L > System.currentTimeMillis()) {
-                onBackPressedDispatcher.onBackPressed()
-            } else {
-                Toast.makeText(
-                    applicationContext, getString(R.string.press_once_again_to_exit),
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-            timer = System.currentTimeMillis()
-        } else {
-            navController.popBackStack()
-        }
-    }
+//    @Deprecated("Deprecated in Java")
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//
+//        val navController: NavController = findNavController(R.id.fragmentContainerView)
+//        val count = navController.backQueue.size
+//
+//        if (count <= 2) {
+//            if (timer + 2000L > System.currentTimeMillis()) {
+//                onBackPressedDispatcher.onBackPressed()
+//            } else {
+//                Toast.makeText(
+//                    applicationContext, getString(R.string.press_once_again_to_exit),
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            }
+//            timer = System.currentTimeMillis()
+//        } else {
+//            navController.popBackStack()
+//        }
+//    }
 
 //    override fun recreate() {
 ////        finish()

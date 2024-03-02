@@ -1,16 +1,16 @@
 package com.binay.shaw.justap.helper
 
 import android.util.Log
-import com.binay.shaw.justap.BuildConfig
+//import com.binay.shaw.justap.BuildConfig
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 
 object Logger {
 
     fun debugLog(tag: String?, msg: String?) {
-        if (BuildConfig.DEBUG) {
+//        if (BuildConfig.DEBUG) {
             Log.d(tag, msg!!)
-        }
+//        }
     }
 
     fun Any.debugLog(tag: String? = "DEBUG_TAG") {
@@ -18,9 +18,9 @@ object Logger {
     }
 
     fun debugLog(msg: String?) {
-        if (BuildConfig.DEBUG) {
+//        if (BuildConfig.DEBUG) {
             Log.d("Log", msg!!)
-        }
+//        }
     }
 
     fun logException(tag: String, exception: Exception, logLevel: LogLevel, logToCrashlytics : Boolean = false) {
