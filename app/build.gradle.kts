@@ -10,6 +10,8 @@ plugins {
     id("com.google.dagger.hilt.android")
 }
 
+val ktlint by configurations.creating
+
 android {
     namespace = "com.binay.shaw.justap"
     compileSdk = 34
@@ -27,6 +29,7 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -57,6 +60,40 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
+
+val ktlintCheck by tasks.registering(JavaExec::class) {
+    group = LifecycleBasePlugin.VERIFICATION_GROUP
+    description = "Check Kotlin code style"
+    classpath = ktlint
+    mainClass.set("com.pinterest.ktlint.Main")
+    // see https://pinterest.github.io/ktlint/install/cli/#command-line-usage for more information
+    args(
+        "**/src/**/*.kt",
+        "**.kts",
+        "!**/build/**",
+    )
+}
+
+//tasks.check {
+//    dependsOn(ktlintCheck)
+    // run -> ./gradlew ktlintCheck
+//}
+
+tasks.register<JavaExec>("ktlintFormat") {
+    group = LifecycleBasePlugin.VERIFICATION_GROUP
+    description = "Check Kotlin code style and format"
+    classpath = ktlint
+    mainClass.set("com.pinterest.ktlint.Main")
+    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+    // see https://pinterest.github.io/ktlint/install/cli/#command-line-usage for more information
+    args(
+        "-F",
+        "**/src/**/*.kt",
+        "**.kts",
+        "!**/build/**",
+    )
+    // run -> ./gradlew ktlintFormat
 }
 
 dependencies {
@@ -93,6 +130,12 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     lintChecks("com.slack.lint.compose:compose-lint-checks:1.3.1")
+    ktlint("com.pinterest.ktlint:ktlint-cli:1.2.1") {
+        attributes {
+            attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling.EXTERNAL))
+        }
+    }
+    // ktlint(project(":custom-ktlint-ruleset")) // in case of custom ruleset
 
     //DataStore (SharedPrefs)
     implementation("androidx.datastore:datastore-preferences:1.0.0")
@@ -148,6 +191,9 @@ dependencies {
     implementation("com.google.firebase:firebase-perf-ktx")
     implementation("com.google.firebase:firebase-messaging-ktx:23.4.1")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
+
+
 
     //Room Database
     implementation("androidx.room:room-runtime:$roomVersion")
@@ -181,6 +227,9 @@ dependencies {
 
     //Circular ImageView
     implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // Coil - Image Loading
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
     //Custom AlertBar (Top)
     implementation("com.github.tapadoo:alerter:7.2.4")

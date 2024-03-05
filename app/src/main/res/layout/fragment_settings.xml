@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/background_style"
-    tools:context=".ui.mainScreens.settingsScreen.SettingsFragment">
+    tools:context=".presentation.mainScreens.settingsScreen.SettingsFragment">
 
     <!--ToolBar-->
     <include

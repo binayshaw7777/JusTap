@@ -2,8 +2,8 @@ package com.binay.shaw.justap.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.binay.shaw.justap.helper.Constants
-import com.binay.shaw.justap.helper.Util
+import com.binay.shaw.justap.utilities.Constants
+import com.binay.shaw.justap.utilities.Util
 import com.binay.shaw.justap.model.Accounts
 import com.binay.shaw.justap.model.LocalUser
 import com.binay.shaw.justap.model.User

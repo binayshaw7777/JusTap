@@ -14,6 +14,16 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="MainTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!--Other app theme properties-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="MainTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/modal_drawable</item>
     </style>

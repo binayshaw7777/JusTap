@@ -1,6 +1,6 @@
 package com.binay.shaw.justap.repository
 
-import com.binay.shaw.justap.helper.Util
+import com.binay.shaw.justap.utilities.Util
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException

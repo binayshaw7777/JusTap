@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.binay.shaw.justap.databinding.HistoryItemLayoutBinding
-import com.binay.shaw.justap.helper.Util
+import com.binay.shaw.justap.utilities.Util
 import com.binay.shaw.justap.model.LocalHistory
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy

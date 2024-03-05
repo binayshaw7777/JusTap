@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.binay.shaw.justap.databinding.SocialAccountLayoutBinding
-import com.binay.shaw.justap.helper.Util
+import com.binay.shaw.justap.utilities.Util
 import com.binay.shaw.justap.model.Accounts
-import com.binay.shaw.justap.ui.mainScreens.homeScreen.HomeFragmentDirections
+import com.binay.shaw.justap.presentation.mainScreens.homeScreen.HomeFragmentDirections
 
 
 private var accountsList: List<Accounts> = ArrayList()

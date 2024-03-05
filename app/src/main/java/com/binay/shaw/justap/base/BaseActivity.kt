@@ -8,7 +8,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.binay.shaw.justap.helper.DarkMode
+import com.binay.shaw.justap.utilities.DarkMode
 import com.google.firebase.perf.FirebasePerformance
 import com.google.firebase.perf.metrics.Trace
 import java.util.Locale

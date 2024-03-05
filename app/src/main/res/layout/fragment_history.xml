@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/background_style"
-    tools:context=".ui.mainScreens.historyScreen.HistoryFragment">
+    tools:context=".presentation.mainScreens.historyScreen.HistoryFragment">
 
 
     <!--ToolBar-->

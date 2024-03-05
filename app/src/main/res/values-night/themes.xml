@@ -13,6 +13,17 @@
         <item name="android:statusBarColor">@color/white_and_black</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="MainTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <!--Other app theme properties-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="MainTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
         <item name="android:windowIsFloating">false</item>

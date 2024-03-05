@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.binay.shaw.justap.ui.mainScreens.homeScreen.HomeFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.homeScreen.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/history"
-        android:name="com.binay.shaw.justap.ui.mainScreens.historyScreen.HistoryFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.historyScreen.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/settings"
-        android:name="com.binay.shaw.justap.ui.mainScreens.settingsScreen.SettingsFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.settingsScreen.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/scanner"
-        android:name="com.binay.shaw.justap.ui.mainScreens.qrScreens.qrGeneratorScreen.QRGeneratorFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.qrScreens.qrGeneratorScreen.QRGeneratorFragment"
         android:label="fragment_q_r_generator"
         tools:layout="@layout/fragment_q_r_generator" >
         <action
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/scannerFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.qrScreens.ScannerFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.qrScreens.ScannerFragment"
         android:label="fragment_q_r_scanner"
         tools:layout="@layout/fragment_q_r_scanner" >
         <action
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.settingsScreen.profileScreen.ProfileFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.settingsScreen.profileScreen.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -72,12 +72,12 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.settingsScreen.editScreen.EditProfileFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.settingsScreen.editScreen.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.resultScreen.ResultFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.resultScreen.ResultFragment"
         android:label="fragment_scan_result"
         tools:layout="@layout/fragment_scan_result" >
         <argument
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/addEditFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.homeScreen.accountFragments.AddEditFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.homeScreen.accountFragments.AddEditFragment"
         android:label="fragment_add_edit"
         tools:layout="@layout/fragment_add_edit" >
         <argument
@@ -106,7 +106,7 @@
     </fragment>
     <fragment
         android:id="@+id/customizeQRFragment"
-        android:name="com.binay.shaw.justap.ui.mainScreens.settingsScreen.customize_qr.CustomizeQRFragment"
+        android:name="com.binay.shaw.justap.presentation.mainScreens.settingsScreen.customize_qr.CustomizeQRFragment"
         android:label="fragment_customize_q_r"
         tools:layout="@layout/fragment_customize_q_r" >
         <action
@@ -115,7 +115,7 @@
     </fragment>
     <fragment
         android:id="@+id/imagePickerFragment"
-        android:name="com.binay.shaw.justap.ui.common.ImagePickerFragment"
+        android:name="com.binay.shaw.justap.presentation.common.ImagePickerFragment"
         android:label="fragment_image_picker"
         tools:layout="@layout/fragment_image_picker" />
 

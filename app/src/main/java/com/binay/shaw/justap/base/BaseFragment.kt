@@ -14,7 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.binay.shaw.justap.R
-import com.binay.shaw.justap.helper.Util.clearDataAndLogout
+import com.binay.shaw.justap.utilities.Util.clearDataAndLogout
 import com.google.firebase.auth.FirebaseAuth
 import com.tapadoo.alerter.Alerter
 
@@ -42,7 +42,7 @@ abstract class BaseFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val firebaseUserId = FirebaseAuth.getInstance().uid
         if (firebaseUserId == null) {
-            clearDataAndLogout(lifecycleScope, requireContext(), requireActivity())
+            clearDataAndLogout(lifecycleScope, requireContext())
             Toast.makeText(requireContext(), getString(R.string.anErrorOccurred), Toast.LENGTH_SHORT).show()
         }
     }
